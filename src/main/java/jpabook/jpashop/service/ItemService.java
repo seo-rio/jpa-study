@@ -22,15 +22,13 @@ public class ItemService {
 
     // 변경 감지
     @Transactional
-    public Item updateItem(Long itemId, Book param) {
+    public void updateItem(Long itemId, String name, int price, int stockQuantity) {
         Item findItem = itemRepository.findOne(itemId);
 
-        // 영속 상태
-        findItem.setPrice(param.getPrice());
-        findItem.setName(param.getName());
-        findItem.setStockQuantity(param.getStockQuantity());
-
-        return findItem;
+        // 영속 Entity 변경
+        findItem.setPrice(price); 
+        findItem.setName(name);
+        findItem.setStockQuantity(stockQuantity);
     }
 
     public List<Item> findItems() {
