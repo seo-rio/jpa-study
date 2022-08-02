@@ -1,5 +1,6 @@
 package jpabook.jpashop.domain;
 
+import javax.validation.constraints.NotEmpty;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
@@ -14,6 +15,7 @@ public class Member {
     @Column(name = "member_id")
     private Long Id;
 
+    @NotEmpty
     private String name;
 
     @Embedded
