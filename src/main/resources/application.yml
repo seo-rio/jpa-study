@@ -7,7 +7,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create # 어플리케이션 실행 시점에 갖고 있는 entity를 다지우고 다시 생성
+      ddl-auto: none # 어플리케이션 실행 시점에 갖고 있는 entity를 다지우고 다시 생성
     properties:
       hibernate:
         format_sql: true
