@@ -48,10 +48,10 @@ public class OrderSimpleApiController {
 
         public SimpleOrderDto(Order order) {
             orderId = order.getId();
-            name = order.getMember().getName();
+            name = order.getMember().getName(); // Lazy 초기화
             orderDate = order.getOrderDate();
             orderStatus = order.getStatus();
-            address = order.getDelivery().getAddress();
+            address = order.getDelivery().getAddress(); // Lazy 초기화
         }
     }
 }
