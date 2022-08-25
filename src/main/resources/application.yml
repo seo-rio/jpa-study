@@ -12,6 +12,7 @@ spring:
       hibernate:
         format_sql: true
         default_batch_fetch_size: 100
+   # open-in-view: false # OSIV Disable 설정 (False로 하게되면 영속성 컨텍스트가 Service단에서 종료됨.)
 
 logging:
   level:
