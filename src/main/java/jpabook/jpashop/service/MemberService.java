@@ -13,6 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MemberService {
 
+//    private final MemberRepositoryOld memberRepositoryOld;
     private final MemberRepository memberRepository;
 
     /**
@@ -41,7 +42,7 @@ public class MemberService {
     
     // 회원 한명만 조회 기능
     public Member findOne(Long memberId) {
-        return memberRepository.findOne(memberId);
+        return memberRepository.findById(memberId).get();
     }
 
     /**
@@ -51,7 +52,7 @@ public class MemberService {
      */
     @Transactional
     public void update(Long id, String name) {
-        Member member = memberRepository.findOne(id);
+        Member member = memberRepository.findById(id).get();
         member.setName(name);
     }
 }
