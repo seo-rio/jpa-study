@@ -1,2 +1,2 @@
 # jpa-study
-Spring Boot + Spring Data JPA Study Project
+Spring Boot + JPA Study Project
